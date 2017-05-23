@@ -1,7 +1,7 @@
 <?php
 
 $serverName = "WIN-OOCF35C9EBG\SQLEXPRESS";
-$connectionInfo = array("Database"=>"carclass_work", "UID"=>"sa", "PWD"=>"Alu.2361");
+$connectionInfo = array("Database"=>"carclass_work", "UID"=>"sa", "PWD"=>"Zakharuk123");
 
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
