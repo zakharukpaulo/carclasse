@@ -13,15 +13,15 @@
 	<div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Página Principal</a></li>
-            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation" class="active"><a href="index.php">Página Principal</a></li>
+            <li role="presentation"><a href="create.php">Criar</a></li>
             <li role="presentation"><a href="#">Contact</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Painel de Gestão</h3>
 	</div>
 	<div class="jumbotron">
-        <h3>Jumbotron heading</h3>
+        <h3></h3>
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
       </div>
