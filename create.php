@@ -210,25 +210,25 @@
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input">
+						  <input type="checkbox" class="form-check-input" name="stand_8">
 							Motores24h
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input">
+						  <input type="checkbox" class="form-check-input" name="stand_9">
 							Trovit
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input">
+						  <input type="checkbox" class="form-check-input" name="stand_10">
 							Abmotor
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input">
+						  <input type="checkbox" class="form-check-input" name="stand_11">
 							Portal ACV
 						</label>
 					</div>
