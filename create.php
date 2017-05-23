@@ -26,7 +26,7 @@
 		  <div class="form-group">
 		  <legend>Informação Geral</legend>
 			<label for="plateInput">Matricula</label>
-			<input type="text" class="form-control" id="form_plate" aria-describedby="plateHelp" placeholder="Matricula do Veículo">
+			<input type="text" class="form-control" id="form_plate" aria-describedby="plateHelp" placeholder="Matricula do Veículo" required>
 			<small id="plateHelp" class="form-text text-muted">AA-00-00</small>
 		  </div>
 		  <div class="form-group">
@@ -50,97 +50,97 @@
 			</div>
 		  <div class="form-group">
 			<label for="brandInput">Marca</label>
-			<input type="text" class="form-control" id="form_brand" placeholder="Marca">
+			<input type="text" class="form-control" id="form_brand" placeholder="Marca" required>
 			<small id="brandHelp" class="form-text text-muted">Mercedes-Benz, Smart, Range-Rover</small>
 		  </div>
 		  <div class="form-group">
 			<label for="modelInput">Modelo</label>
-			<input type="text" class="form-control" id="form_model" placeholder="Modelo">
+			<input type="text" class="form-control" id="form_model" placeholder="Modelo" required>
 			<small id="modelHelp" class="form-text text-muted">C220, ForTwo, Evoque</small>
 		  </div>
 		  <div class="form-group">
 			<label for="versionInput">Versão</label>
-			<input type="text" class="form-control" id="form_version" placeholder="Versão">
+			<input type="text" class="form-control" id="form_version" placeholder="Versão" required>
 			<small id="versionHelp" class="form-text text-muted">CDi Avantgarde, 1.0 Gasolina, 2.0 L I4 gasolina</small>
 		  </div>
 		  <div class="form-group">
 			<label for="fuelInput">Combustível</label>
-			<input type="text" class="form-control" id="form_fuel" placeholder="Combustível">
+			<input type="text" class="form-control" id="form_fuel" placeholder="Combustível" required>
 			<small id="fuelHelp" class="form-text text-muted">Gasolina, Gasóleo, Híbrido</small>
 		  </div>
 		  <div class="form-group">
 			<label for="priceInput">Preço</label>
-			<input type="text" class="form-control" id="form_price" placeholder="Preço">
+			<input type="text" class="form-control" id="form_price" placeholder="Preço" required>
 			<small id="priceHelp" class="form-text text-muted">15435,23 , 13500, 25000</small>
 		  </div>
 		  <div class="form-group">
 			<label for="b2bInput">PreçoB2B</label>
-			<input type="text" class="form-control" id="form_b2b" placeholder="Preço Business-2-Business">
+			<input type="text" class="form-control" id="form_b2b" placeholder="Preço Business-2-Business" required>
 			<small id="b2bHelp" class="form-text text-muted">15435,23 , 13500, 25000</small>
 		  </div>
 		  <div class="form-group">
 			<label for="yearInput">Ano</label>
-			<input type="text" class="form-control" id="form_year" maxlength="4" placeholder="Ano">
+			<input type="text" class="form-control" id="form_year" maxlength="4" placeholder="Ano" required>
 			<small id="yearHelp" class="form-text text-muted">1998, 2007, 2015</small>
 		  </div>
 		  <div class="form-group">
 			<label for="monthInput">Mês</label>
-			<input type="text" class="form-control" id="form_month" maxlength="2" placeholder="Mês">
+			<input type="text" class="form-control" id="form_month" maxlength="2" placeholder="Mês" required>
 			<small id="monthHelp" class="form-text text-muted">03, 10, 07</small>
 		  </div>
 		  <div class="form-group">
 			<label for="tollInput">TollClass</label>
-			<input type="text" class="form-control" id="form_toll" placeholder="Toll Class">
+			<input type="text" class="form-control" id="form_toll" placeholder="Toll Class" required>
 			<small id="tollHelp" class="form-text text-muted">Valores Toll Class</small>
 		  </div>
 		  <div class="form-group">
 			<label for="originInput">Origem</label>
-			<input type="text" class="form-control" id="form_origin" placeholder="Pais de Origem">
+			<input type="text" class="form-control" id="form_origin" placeholder="Pais de Origem" required>
 			<small id="originHelp" class="form-text text-muted">Portugal, Alemanha, França</small>
 		  </div>
 		  <div class="form-group">
 			<label for="colorInput">Cor</label>
-			<input type="text" class="form-control" id="form_color" placeholder="Cor do Veículo">
+			<input type="text" class="form-control" id="form_color" placeholder="Cor do Veículo" required>
 			<small id="colorHelp" class="form-text text-muted">Cinza, Vermelho, Branco</small>
 		  </div>
 		  <div class="form-group">
 			<label for="seatColourInput">Cor dos bancos</label>
-			<input type="text" class="form-control" id="form_seatColor" placeholder="Cor dos bancos">
+			<input type="text" class="form-control" id="form_seatColor" placeholder="Cor dos bancos" required>
 			<small id="seatColorHelp" class="form-text text-muted">Cinza, Preto, Castanho</small>
 		  </div>
 		  <div class="form-group">
 			<label for="qntBancosInput">Quantidade de Bancos</label>
-			<input type="text" class="form-control" id="form_qntBancos" placeholder="Quantidade de Bancos">
+			<input type="text" class="form-control" id="form_qntBancos" placeholder="Quantidade de Bancos" required>
 			<small id="qntBancosHelp" class="form-text text-muted">2, 5, 8</small>
 		  </div>
 		  <div class="form-group">
 			<label for="kmsInput">Quilometragem</label>
-			<input type="text" class="form-control" id="form_kms" placeholder="Quilometragem">
+			<input type="text" class="form-control" id="form_kms" placeholder="Quilometragem" required>
 			<small id="kmsHelp" class="form-text text-muted">14000, 25000, 130000</small>
 		  </div>
 		   <div class="form-group">
 			<label for="doorsInput">Portas</label>
-			<input type="text" class="form-control" id="form_doors" placeholder="Quantidade de Portas">
+			<input type="text" class="form-control" id="form_doors" placeholder="Quantidade de Portas" required>
 			<small id="doorsHelp" class="form-text text-muted">3, 5, 7</small>
 		  </div>
 		  <div class="form-group">
 			<label for="powerInput">Potência</label>
-			<input type="text" class="form-control" id="form_power" placeholder="Potência">
+			<input type="text" class="form-control" id="form_power" placeholder="Potência" required>
 			<small id="powerHelp" class="form-text text-muted">125, 200, 768</small>
 		  </div>
 		  <div class="form-group">
 			<label for="ownersInput">Donos</label>
-			<input type="text" class="form-control" id="form_owners" placeholder="Quantidade de donos anteriores">
+			<input type="text" class="form-control" id="form_owners" placeholder="Quantidade de donos anteriores" required>
 			<small id="ownersHelp" class="form-text text-muted">1, 2, 5</small>
 		  </div>
 		  <div class="form-group">
 			<label for="CCInput">Cilindrada</label>
-			<input type="text" class="form-control" id="form_CC" placeholder="Cilindrada do Motor">
+			<input type="text" class="form-control" id="form_CC" placeholder="Cilindrada do Motor" required>
 			<small id="CCHelp" class="form-text text-muted">1200, 2650, 1900</small>
 		  </div>
 		  <div class="form-group">
 			<label for="exampleTextarea">Observações</label>
-			<textarea class="form-control" id="form_obs" rows="3"></textarea>
+			<textarea class="form-control" id="form_obs" rows="3" required></textarea>
 			<small id="obsHelp" class="form-text text-muted">Bom estado , Lavado, Pequeno risco na porta esquerda</small>
 		  </div>
 		  <div class="form-group">
