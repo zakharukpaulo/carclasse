@@ -1,9 +1,11 @@
-﻿<?php 
+<?php 
 include "connect.php";
+include "htmlconfig.php";
+
 //preencher o xml com os detalhes do carro
 $sql = "SELECT * FROM Veiculos WHERE ID = 1";
 $stmt = sqlsrv_query($conn, $sql);
-$openXML = new SimpleXMLElement("<VehicleList></VehicleList>");
+$openXML = new SimpleXMLElement('	<VehicleList></VehicleList>');
 $vehicles = $openXML->addChild('Vehicles');
 while($row = sqlsrv_fetch_array($stmt))
 {
