@@ -1,7 +1,7 @@
 ﻿<?php 
 include "connect.php";
+//preencher o xml com os detalhes do carro
 $sql = "SELECT * FROM Veiculos WHERE ID = 1";
-
 $stmt = sqlsrv_query($conn, $sql);
 $openXML = new SimpleXMLElement("<VehicleList></VehicleList>");
 $vehicles = $openXML->addChild('Vehicles');
@@ -33,7 +33,28 @@ while($row = sqlsrv_fetch_array($stmt))
 	$vehicles->addChild('TaxDeductible', $row[24]);
 	$vehicles->addChild('WarrantyMonth', $row[25]);
 }
+//preencher com os nomes do stand
+$query_for_stands = "SELECT DISTINCT Site, Veiculos.ID from tbl_ExportSites, Veiculos where tbl_ExportSites.ID = Veiculos.ID AND Veiculos.ID = 1";
+$stmt = sqlsrv_query($conn, $query_for_stands);
+$StandList = $vehicles->addChild('ExportSites');
+while($row = sqlsrv_fetch_array($stmt)){
+	$StandList->addChild('Site', $row[0]);
+}
 
+//preencher com os links para as fotos
+$query_for_photos = "SELECT Photo, Veiculos.ID FROM Fotos, Veiculos WHERE Fotos.id_car = Veiculos.ID AND Veiculos.ID = 1";
+$stmt = sqlsrv_query($conn, $query_for_photos);
+$PhotoList = $vehicles->addChild('PhotoList');
+while($row = sqlsrv_fetch_array($stmt)){
+	$PhotoList->addChild('Photo', $row[0]);
+}
 
-Header('Content-type: text/xml');
+//preencher com os extras selecionados
+$query_for_extras = "SELECT Extra, Veiculos.ID FROM Extras, Veiculos WHERE Extras.id_car = Veiculos.ID AND Veiculos.ID = 1";
+$stmt = sqlsrv_query($conn, $query_for_extras);
+$ExtrasList = $vehicles->addChild('ExtrasList');
+while($row = sqlsrv_fetch_array($stmt)){
+	$ExtrasList->addChild('Extra', $row[0]);
+}
+header('Content-Type: text/xml; charset=utf-8');
 echo $openXML->asXML();
