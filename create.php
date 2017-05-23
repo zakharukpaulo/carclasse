@@ -22,7 +22,7 @@
 	</div>
 	<div class="jumbotron">
         <h3>Menu de criação</h3>
-        <form>
+        <form action="welcome.php" method="post">
 		  <div class="form-group">
 		  <legend>Informação Geral</legend>
 			<label for="plateInput">Matricula</label>
@@ -161,33 +161,81 @@
 			<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
 			<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
 		  </div>
-		  <fieldset class="form-group">
-			<legend>Radio buttons</legend>
-			<div class="form-check">
-			  <label class="form-check-label">
-				<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-				Option one is this and that&mdash;be sure to include why it's great
-			  </label>
-			</div>
-			<div class="form-check">
-			<label class="form-check-label">
-				<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-				Option two can be something else and selecting it will deselect option one
-			  </label>
-			</div>
-			<div class="form-check disabled">
-			<label class="form-check-label">
-				<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-				Option three is disabled
-			  </label>
-			</div>
+			  <fieldset class="form-group">
+				<legend>Stands</legend>
+				  <div class="col-md-6">
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input" name="stand_1">
+							Standvirtual
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input" name="stand_2">
+							Coisas
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input" name="stand_3">
+							Autosapo
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input" name="stand_4">
+							Custojusto
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input" name="stand_5">
+							Olx
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input" name="stand_6">
+							Motornacional
+						</label>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input" name="stand_7">
+							Autohoje
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input">
+							Motores24h
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input">
+							Trovit
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input">
+							Abmotor
+						</label>
+					</div>
+					<div class="form-check">
+						<label class="form-check-label">
+						  <input type="checkbox" class="form-check-input">
+							Portal ACV
+						</label>
+					</div>
+				</div>
+			
 		  </fieldset>
-		  <div class="form-check">
-			<label class="form-check-label">
-			  <input type="checkbox" class="form-check-input">
-			  Check me out
-			</label>
-		  </div>
+		  
 		  <button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 
