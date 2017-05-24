@@ -4,6 +4,19 @@ $time = microtime();
 $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
+include "functions.php";
+$loop = 1;
+$stand_array = array();
+//recolha de informação do registo
+if(isset($_POST['register_car'])){
+	if(!empty($_POST['stand'])) {
+		foreach($_POST['stand'] as $stand_name) {
+				array_push($stand_array, $stand_name);
+				
+		}
+		print_r($stand_array);
+}
+}
 ?>
 <html>
 <head>
@@ -28,23 +41,23 @@ $start = $time;
 	</div>
 	<div class="jumbotron">
         <h3>Menu de criação</h3>
-        <form action="welcome.php" method="post">
+        <form action="create.php" method="post">
 		  <div class="form-group">
 		  <legend>Informação Geral</legend>
 			<label for="plateInput">Matricula</label>
-			<input type="text" class="form-control" id="form_plate" aria-describedby="plateHelp" placeholder="Matricula do Veículo" required>
+			<input type="text" class="form-control" id="form_plate" name="form_plate" aria-describedby="plateHelp" placeholder="Matricula do Veículo" required>
 			<small id="plateHelp" class="form-text text-muted">AA-00-00</small>
 		  </div>
 		  <div class="form-group">
 			<label for="sectionSelect">Example select</label>
-			<select class="form-control" id="form_section_select">
-			  <option value="1">Ligeiro (VLP)</option>
-			  <option value="2">Comercial (VCL)</option>
+			<select class="form-control" id="form_section_select" name="form_section_select">
+			  <option>Ligeiro (VLP)</option>
+			  <option>Comercial (VCL)</option>
 			</select>
 		  </div>
 		  <div class="form-group">
 			<label for="categorySelect">Example multiple select</label>
-			<select class="form-control" id="form_category_select">
+			<select class="form-control" id="form_category_select" name="form_category_select">
 				<option>Cabrios / Roadster</option>
 				<option>Todo-o-terreno</option>
 				<option>Carrinha / Combi</option>
@@ -164,45 +177,55 @@ $start = $time;
 		  
 		  <div class="form-group">
 			<label for="exampleInputFile">File input</label>
-			<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-			<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+			<input type="file" class="form-control-file" id="car_fileInput1" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput2" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput3" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput4" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput5" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput6" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput7" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput8" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput9" aria-describedby="fileHelp">
+			<input type="file" class="form-control-file" id="car_fileInput10" aria-describedby="fileHelp">
+			<small id="fileHelp" class="form-text text-muted">A primeira foto será a foto de capa do veículo.</small>
 		  </div>
+		  
 			  <fieldset class="form-group">
 				<legend>Stands</legend>
 				  <div class="col-md-6">
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_1">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Standvirtual">
 							Standvirtual
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_2">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Coisas">
 							Coisas
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_3">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Autosapo">
 							Autosapo
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_4">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Custojusto">
 							Custojusto
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_5">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Olx">
 							Olx
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_6">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Motornacional">
 							Motornacional
 						</label>
 					</div>
@@ -210,31 +233,31 @@ $start = $time;
 				<div class="col-md-6">
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_7">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Autohoje">
 							Autohoje
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_8">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Motores24h">
 							Motores24h
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_9">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Trovit">
 							Trovit
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_10">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Abmotor">
 							Abmotor
 						</label>
 					</div>
 					<div class="form-check">
 						<label class="form-check-label">
-						  <input type="checkbox" class="form-check-input" name="stand_11">
+						  <input type="checkbox" class="form-check-input" name="stand[]" value="Portal ACV">
 							Portal ACV
 						</label>
 					</div>
@@ -242,7 +265,7 @@ $start = $time;
 			
 		  </fieldset>
 		  
-		  <button type="submit" class="btn btn-primary">Submit</button>
+		  <button type="submit" class="btn btn-primary" name="register_car">Submit</button>
 		</form>
 
       </div>
@@ -255,7 +278,7 @@ $start = $time;
 			$('#form_section_select').on('change', function(){
 			   console.log($('#form_section_select').val());
 				$('#form_category_select').html('');
-				if($('#form_section_select').val()== 1){
+				if($('#form_section_select option:selected').text()== "Ligeiro (VLP)"){
 					$('#form_category_select').append('<option>Cabrios / Roadster</option>');
 					$('#form_category_select').append('<option>Todo-o-terreno</option>');
 					$('#form_category_select').append('<option>Carrinha / Combi</option>');
